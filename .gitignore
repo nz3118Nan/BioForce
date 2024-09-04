@@ -166,3 +166,7 @@ cython_debug/
 
 # ignore all files in the BigData folder
 BigData/*
+
+# ignore all files in the Academic/A01_RIF/result folder
+Academic/A01_RIF/result/*
+

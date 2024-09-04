@@ -1,0 +1,17 @@
+{
+    "V4": {
+        "data_path": "/Users/zhounan/Documents/Github_Project/BioForce/Academic/A01_RIF/data/v4.csv",
+        "target": "label_1",
+        "appendix": "n400 val 50 \u968f\u673a\u6311\u9009 label_1",
+        "shape": [
+            348,
+            12075
+        ],
+        "val_exist": true,
+        "val_shape": [
+            50,
+            12075
+        ],
+        "data_val_path": "/Users/zhounan/Documents/Github_Project/BioForce/Academic/A01_RIF/data/v4_val.csv"
+    }
+}

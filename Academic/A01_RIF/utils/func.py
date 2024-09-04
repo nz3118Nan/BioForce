@@ -2,11 +2,10 @@
 import os
 import sys
 file_path = os.path.abspath(__file__)
-root_dir = os.path.abspath(os.path.join(file_path, '..', '..', '..'))
+root_dir = os.path.abspath(os.path.join(file_path, '..', '..', '..', '..'))
 sys.path.append(root_dir)
 sys.dont_write_bytecode = True
 os.chdir(root_dir)
-
 
 import pandas as pd
 from tqdm import tqdm   
