@@ -338,28 +338,32 @@ data_val = data_val[data.columns]
 data_val = data_val.astype(float)
 data = data.astype(float)
 
-data.to_csv(os.path.join(root_dir, 'Academic/A01_RIF/data', f'{v}.csv'), index=False)
-data_val.to_csv(os.path.join(root_dir, 'Academic/A01_RIF/data', f'{v}_val.csv'), index=False)
+if not os.path.exists(os.path.join(root_dir, 'Academic/A01_RIF/data')):
+
+    data.to_csv(os.path.join(root_dir, 'Academic/A01_RIF/data', f'{v}.csv'), index=False)
+    data_val.to_csv(os.path.join(root_dir, 'Academic/A01_RIF/data', f'{v}_val.csv'), index=False)
 
 
-# data_register 
-## Academic/A01_RIF/data/data_info.json
-with open(os.path.join(root_dir, 'Academic/A01_RIF/data/data_info.json'), 'r') as f:
-    data_info = json.load(f)
+    # data_register 
+    ## Academic/A01_RIF/data/data_info.json
+    with open(os.path.join(root_dir, 'Academic/A01_RIF/data/data_info.json'), 'r') as f:
+        data_info = json.load(f)
 
-data_info[version] = {}
-data_info[version]['data_path'] = os.path.join(root_dir, 'Academic/A01_RIF/data', f'{v}.csv')
-data_info[version]['target'] = target
-data_info[version]['appendix'] = description
-data_info[version]['shape'] = np.shape(data)
-data_info[version]['val_exist'] = True if n != 0 else False
-data_info[version]['val_shape'] = np.shape(data_val) if n != 0 else None
-data_info[version]['data_val_path'] = os.path.join(root_dir, 'Academic/A01_RIF/data', f'{v}_val.csv')
+    data_info[version] = {}
+    data_info[version]['data_path'] = os.path.join(root_dir, 'Academic/A01_RIF/data', f'{v}.csv')
+    data_info[version]['target'] = target
+    data_info[version]['appendix'] = description
+    data_info[version]['shape'] = np.shape(data)
+    data_info[version]['val_exist'] = True if n != 0 else False
+    data_info[version]['val_shape'] = np.shape(data_val) if n != 0 else None
+    data_info[version]['data_val_path'] = os.path.join(root_dir, 'Academic/A01_RIF/data', f'{v}_val.csv')
 
-# save data_info
-with open(os.path.join(root_dir, 'Academic/A01_RIF/data/data_info.json'), 'w') as f:
-    json.dump(data_info, f, indent=4)
-
+    # save data_info
+    with open(os.path.join(root_dir, 'Academic/A01_RIF/data/data_info.json'), 'w') as f:
+        json.dump(data_info, f, indent=4)
+        
+else:
+    print("Data already exists")
 
 #######################################
 # test
