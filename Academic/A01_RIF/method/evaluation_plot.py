@@ -96,7 +96,7 @@ col_name = list(data.columns)
 # importance_analysis_1_common = {}
 importance_analysis_avg_common = {}
 
-model_list = ["Ridge", "Lasso"]
+model_list = ['LogisticRegression', 'SVM', 'Ridge', 'Lasso']
 
 num_exp = 50
 for model in model_list:
@@ -154,6 +154,24 @@ for model in model_list:
         importance_analysis_avg_common[model][col]['rank_avg'] = np.mean(importance_analysis_avg_common[model][col]['rank'])
         importance_analysis_avg_common[model][col]['value_avg'] = np.mean(importance_analysis_avg_common[model][col]['value'])
 
+
+feature_list_top = []
+count_dic = {}
+threshold = 1000
+
+for col in col_name:
+    count_dic[col] = 0
+
+for model in model_list:
+    for col in col_name:
+        if importance_analysis_avg_common[model][col]['rank_avg'] < threshold:
+            count_dic[col] += 1
+            
+for col in col_name:
+    if count_dic[col] >= 2:
+        feature_list_top.append(col)
+
+print(f"Number of features that are in top {threshold} features in at least 2 models: {len(feature_list_top)}")
 
 # num of experiment model 
 num_exp = len(exp_log['model_list'][:6])    

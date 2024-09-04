@@ -5,12 +5,12 @@
         "appendix": "n400 val 50 \u968f\u673a\u6311\u9009 label_1",
         "shape": [
             348,
-            12075
+            12632
         ],
         "val_exist": true,
         "val_shape": [
             50,
-            12075
+            12632
         ],
         "data_val_path": "/Users/zhounan/Documents/Github_Project/BioForce/Academic/A01_RIF/data/v4_val.csv"
     }

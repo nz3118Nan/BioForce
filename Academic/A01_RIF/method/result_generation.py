@@ -1034,7 +1034,7 @@ if True:
     
 
 # check existence of result in exp_log
-if 'auc_dic' in exp_log[model_name].keys():
+if 'auc_dic' not in exp_log[model_name].keys():
     # run the experiment
     for i in tqdm(range(num_exp)):
         random_seed = np.random.randint(0, 100)
