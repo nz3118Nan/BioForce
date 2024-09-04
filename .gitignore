@@ -164,8 +164,8 @@ cython_debug/
 # ignore all local .env files
 .env.*
 
-# ignore all files in the BigData folder
-BigData/*
+# ignore subfolders in the BigData folder
+BigData/*/
 
 # ignore all files in the Academic/A01_RIF/result folder
 Academic/A01_RIF/result/*

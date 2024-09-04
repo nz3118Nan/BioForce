@@ -1,0 +1,34 @@
+{
+    "RIF_V1": {
+        "link": "https://drive.google.com/file/d/1hsv7FKU1GvkfCeKG1BINwOIQOg0FZkYX/view?usp=drive_link",
+        "size": "124 MB",
+        "description": "RIF_V1",
+        "file_name": "RIF_V1.csv",
+        "project": "A01_RIF",
+        "project_data_order": 0,
+        "store_path": "BigData/A01_RIF/RIF_V1.csv",
+        "compressed": false,
+        "format": "csv"
+    },
+    "RIF_V2": {
+        "link": "https://drive.google.com/file/d/1jfKjuRhHUMzoZZo170C2SenTpHYOpAzb/view?usp=drive_link",
+        "size": "1.2 GB",
+        "description": "RIF_V2",
+        "file_name": "RIF_V2.csv",
+        "project": "A01_RIF",
+        "project_data_order": 1,
+        "store_path": "BigData/A01_RIF/RIF_V2.csv",
+        "format": "csv"
+    },
+    "RIF_V3": {
+        "link": "https://drive.google.com/file/d/1dbBLaYvhKXuH0-4fdShC_WQxNKdupbBu/view?usp=drive_link",
+        "size": "1.2 GB",
+        "description": "RIF_V3",
+        "file_name": "RIF_V3.csv",
+        "project": "A01_RIF",
+        "project_data_order": 2,
+        "store_path": "BigData/A01_RIF/RIF_V3.csv",
+        "compressed": false,
+        "format": "csv"
+    }
+}
